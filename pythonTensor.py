@@ -1,10 +1,11 @@
+#Imports
 import pandas as pd
-#import library to split the data
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+
 
 
 #Lectura de path para sacar un csv desde la carpeta donde está el script
@@ -108,7 +109,7 @@ with tf.Session() as sess:
 
 
     def denormalize(array, second):
-        return (-1*(array * second.std()*-1) - second.mean())
+        return ((array * second.std()*-1) - second.mean())
 
     plt.figure()
     plt.plot(X_train, Y_train, 'ro', label='Muestras normalizadas')

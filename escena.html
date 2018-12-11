@@ -17,6 +17,7 @@
     }
         body {
       background-color: #2C3840;
+
     }
   </style>
 
@@ -135,6 +136,15 @@ background-size: 100%;
   z-index: 10; 
   position: absolute;
 }
+#cardid{
+  width: 18rem;
+  left:80%;
+  top:0%; 
+  height:100%;
+  background-color: #26663F;
+  z-index: 10; 
+  position: absolute;
+}
 @media screen and (max-width: 600px) {
   #cardid {
     clear: both;
@@ -180,6 +190,7 @@ body {font-size:16px;}
     <a href="#delfin" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Delfín del Ganges</a>
     <a href="#orangutan" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Orangután de Sumatra</a>
     <a href="#oso" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Oso Polar</a>
+
   </div>
 </nav>
 
@@ -232,12 +243,14 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+
+
+
 function togglediv(id) {
     var div = document.getElementById(id);
     div.style.display = div.style.display == "none" ? "block" : "none";
 }
-        
-         
+
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

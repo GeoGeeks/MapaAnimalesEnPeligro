@@ -22,7 +22,7 @@
         background-size:51px 51px;
         background-position: 0 0, 25px 25px;
     }
-  </style>
+    </style>
 
 <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
 
@@ -52,6 +52,8 @@
         }
       });
 
+      //map.add(SceneView);
+
       var tileLayer = new VectorTileLayer({
       url: "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/Esri_Childrens_Map/VectorTileServer"
       });
@@ -67,15 +69,21 @@
 
 <style>
 #mySidebar {
-  background-color: #26663F;
-  color: #000000
+  background-color: "#26663F";
+  color: #000000;
 }
 .w3-button{
-  color:#1E4744;
+   color:#1E4744;
 }
 .w3-sidebar, .w3-red, .w3-collapse, .w3-top, .w3-large, .w3-padding{
   background-color: #ffffff;
 }
+
+.home{
+  background-image: url("Recursos/boton.png");
+}
+
+
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
@@ -90,7 +98,7 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>Animales<br>en peligro<br>de extinción</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" id="home">Home</a> 
     <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
     <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
     <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 

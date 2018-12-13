@@ -62,11 +62,12 @@
         "esri/layers/VectorTileLayer",
         "esri/layers/FeatureLayer"
     ], function(Map, SceneView, VectorTileLayer, FeatureLayer) {
-        var map = new Map();
+        var map = new Map( );
         var view = new SceneView({
             container: "viewDiv",
             map: map,
             scale: 5000000000,
+
             center: [-101.17, 21.78],
             alphaCompositingEnabled: true,
             environment: {
@@ -77,8 +78,11 @@
                 }
             }
 
-        });
-
+        }
+      );
+  view.ui.remove('zoom');
+    view.ui.remove('toggle');
+    view.ui.remove('compass');
         function shiftCamera(deg) {
             var camera = view.camera.clone();
             camera.position.z += deg;
@@ -109,10 +113,10 @@
 
             nombre("Rinoceronte Java");
             lugar("Vietnam, Isla de Java y Borneo");
-            causas("Se encuentran en peligro debido a la caza de los mismos para obtener cuernos. Los cuernos se usan de forma medicinal y para hacer ornamentos diferentes en objetos como dagas. Adicionalmente  la conversión de lugares boscosos en territorios agricolas, desplazan al rinoceronte java y lo exponn a diversos peligros en forma de enfermedad y escacez de comida.");
+            causas("Se encuentran en peligro debido a la caza de los mismos para obtener cuernos. Adicionalmente  la conversión de lugares boscosos en territorios agricolas, desplazan al rinoceronte java y lo exponn a diversos peligros en forma de enfermedad y escacez de comida.");
             habitat("Bosques humedos y lugares con pastos altos. Generalmente encontrados en lugares de baja altitud, sin embargo la actividad humana los ha desplazado a espacios más elevados.");
             fuentes("WWF, Animal Info, abc.es");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
+            Imagen1("imagenes/rinoceronte.png");
 
             GoToPlace(110, 1, 7000000)
 
@@ -127,7 +131,7 @@
             habitat("Lugares secos del sub sahara africano, generalmente planicias, ya que estas son perfectas para su camuflaje. Sin embargo no es raro encontrarlos en areas más boscosas.");
             fuentes("WWF, Animal Info, abc.es");
 
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
+             Imagen1("imagenes/guepardo.png");
             GoToPlace(32, 7, 100000000)
 
         });
@@ -140,8 +144,7 @@
             causas("Principalmente cazadores que sirven al mercado negro chino. Adicionalmente la tala ilegal de arboles destroza el habitat natural y los obliga a migrar a lugares sobre los que no tienen control.");
             habitat("Bosques templados");
             fuentes("WWF, Animal Info");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
-
+             Imagen1("imagenes/tigre.png");
             GoToPlace(120, 35, 10000000)
 
         });
@@ -150,11 +153,11 @@
 
             nombre("Elefante asiático");
             lugar("Bangladesh, Bután, Brunei, Camboya, China, India, Indonesia, Laos, Malasia, Birmania, Nepal, Sri Lanka, Tailandia y Vietnam.");
-            causas("Inicialmente, se encuentran en peligro de extinción debido al comercio ilegal de marfíl, el cual a pesar de afectar principalmente a los elefantes africanos, los elefantes asiáticos también son victimas de este tipo de caza. Por otro lado, la pérdida de colmillos en los machos, reduce la propabilidad de que estos se reproduzcan. Además, la captura de elefantes para uso doméstico se ha convertido en una amenaza para esta especie.");
+            causas("Inicialmente, se encuentran en peligro de extinción debido al comercio ilegal de marfíl, el cual a pesar de afectar principalmente a los elefantes africanos, los elefantes asiáticos también son victimas de este tipo de caza. Por otro lado, la pérdida de colmillos en los machos, reduce la propabilidad de que estos se reproduzcan.");
             habitat("Bosques");
             fuentes("WWF, Animal Info");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
-
+            Imagen1("imagenes/elefante.png");
+           
             GoToPlace(100, 11, 15000000)
 
         });
@@ -166,8 +169,8 @@
             causas("Esta especie se encuentra en peligro de extinción debido a las actividades de pesca con redes, ya que estas se enredan en las redes frecuentemente. Además, son objeto de contrabando ilegal hacia Estados Unidos. Se estima que esta especie estará completamente extinta en este año (2018).");
             habitat("Mares del norte del Golfo de California");
             fuentes("WWF, Animal Info");
-
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
+ Imagen1("imagenes/vaquita.png");
+           
             GoToPlace(-110, 30, 10000000, )
 
         });
@@ -180,7 +183,8 @@
             causas("Su hábitat está siendo destruido por laindustria ilegal de carbón vegetal y actividades agropecuarias. Además, el contacto con los humanos los hace ser vulnerables a distintas enfermedades como resfriados que pueden acabar con sus vidas. ");
             habitat("Montañas y bosques");
             fuentes("WWF, Animal Info");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
+             Imagen1("imagenes/gorila.png");
+           
 
             GoToPlace(25, -5, 10000000)
 
@@ -192,8 +196,8 @@
             causas("Actividades humanas como la agricultura, desplazan la especie a diferentes lugares con menos comida. Adicionalmente Los perros domésticos compiten en las mismas áreas por el mismo alimento. Y los mismos perros pueden reproducirse con el lobo etiope (Creando hibridos). Otro problema con los perros, es que tambien se pasan enfermedades como la rabia.");
             habitat("Praderas y brezales");
             fuentes("WWF, Animal Info, AWF");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
-
+             Imagen1("imagenes/lobo.png");
+           
             GoToPlace(38.7, 7.5, 6000000)
 
         });
@@ -201,11 +205,11 @@
 
             nombre("Delfín del Ganges");
             lugar("Bangladesh, India, Nepal y Bután");
-            causas("La principal causa por la cual s e encuentran en peligro de extinción se relaciona con la pesca para la producción de aceite de delfín, utilizado para atraer otros peces y también con fines medicinales. Además las represas y los proyectos de riegos de cultivos afectan la calidad del agua de los ríos donde este delfín habita y la deforestación han aportado a la degradación de esta especie. Por último, se encuentra la contaminación de los ríos producida por las industrias.");
+            causas("La principal causa por la cual se encuentran en peligro de extinción se relaciona con la pesca para la producción de aceite de delfín.  Además las represas y los proyectos de riegos de cultivos afectan la calidad del agua de los ríos donde este delfín habita.");
             habitat("Sistema fluvial de Ganges y Brahmaputra");
             fuentes("WWF, Animal Info");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
-
+            Imagen1("imagenes/delfin.png");
+           
             GoToPlace(90, 20, 7000000)
 
         });
@@ -217,7 +221,8 @@
             habitat("Bosques húmedos tropicales y subtropicales de hoja ancha");
             fuentes("WWF, Animal Info");
 
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
+            Imagen1("imagenes/orangutan.png");
+           
             GoToPlace(105, 0, 7000000)
 
         });
@@ -229,8 +234,8 @@
             causas("Principalmente, la baja en osos polares es debido a calentamiento global. La actividad humana derrite los casquetes polares, dejando a los osos sin hábitat. Adicionalmente se pueden ver casos de caza ilegal en lugares como Canadá o Rusia. Existen otros factores adyacentes como desastres petroleros, los cuales dañan por completo las cadenas alimenticias en las que participan los osos.");
             habitat("Regiones Polares");
             fuentes("WWF, Animal Info, polarbearscience");
-            Imagen1("http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg");
-
+            Imagen1("imagenes/oso.png");
+           
             GoToPlace(-70, 85, 15000000)
 
         });
@@ -275,7 +280,13 @@
         cursor: pointer;
     }
 
-    .card-body {
+
+    #barb{
+   color: #FFFFFF;
+
+    }
+
+        .card-body {
 
         background-color: rgba(24, 21, 21, 0.48);
         color: #FFFFFF;
@@ -296,10 +307,13 @@
     }
 
     #img1 {
-        height: 100px;
-        width: 100px;
+        height: 125px;
+        width: 125px;
         overflow: hidden;
-
+        position: center;
+        margin-left: 20%;
+        margin-top:5%;
+       margin-bottom:5%;
     }
 
 
@@ -338,8 +352,19 @@ top: 60%;
 
     #BarraResponsive {
         height: 10%;
+        width: 100%;
+        background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
         z-index: 1;
-        background-color: #E2670E;
+        background-image: url(imagenes/bannermovil.png);
+      font-family: 'Botones';
+        src: url("fuentes/JuanMikes.otf");
+        font-size: 30px;
+
     }
 
 
@@ -360,6 +385,8 @@ top: 60%;
         color: #fff;
         border: none;
         position: absolute;
+        font-family: 'Botones';
+        src: url("fuentes/JuanMikes.otf");
         z-index: 10;
         height: 10%;
         width: 15%;
@@ -432,7 +459,17 @@ top: 60%;
             padding-right: 0px;
 
         }
+.w3-hover-white{
+    background-color: transparent;
+}
+.w3-bar-item{
+ background-color: transparent;
 
+}
+.w3-button{
+ background-color: transparent;
+
+}
         #buttonTog {
             background-image: url("imagenes/boton.png");
             background-repeat: no-repeat;
@@ -499,7 +536,7 @@ top: 60%;
     <nav class="w3-sidebar  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Cerrar menu</a>
         <div class="w3-container">
-            <h1 class="w3-padding-64"><b>Animales<br>en Peligro<br>de Extincion</b></h1>
+            <h1 id = "barb" class="w3-padding-64"><b>Animales<br>en Peligro<br>de Extincion</b></h1>
         </div>
         <div class="w3-bar-block">
             <a id="#Rinoceronte" class="w3-bar-item w3-button w3-hover-white">Rinoceronte de Java </a>
@@ -524,13 +561,15 @@ top: 60%;
         <div id="viewDiv" class="w3-main" style="width:100%;height:100%; position: absolute;"></div>
         <div id="cardid" class="card">
             <div class="card-body">
-                <img id= "img1" class="card-img-top" src="http://d2ouvy59p0dg6k.cloudfront.net/img/_h9a0265_520052.jpg">
+                <img id= "img1" class="card-img-top" src="imagenes/logo.png">
                
-                <p id="Text1" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <p id="Text2" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <p id="Text3" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <p id="Text4" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <p id="Text5" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p id="Text1" class="card-text">En este mapa se presentan 10 especies de animales en peligro de extinción, sin contar las muchas más que se encuentran en esta condición.
+Conoce los diferentes lugares del planeta donde estas especies habitan, junto con algunos datos sobre cada especie y una gráfica donde podrás entender cómo ha cambiado la población proyectada hasta el año 2022.
+Elaborado por:</p>
+                <p id="Text2" class="card-text"></p>
+                <p id="Text3" class="card-text"></p>
+                <p id="Text4" class="card-text"></p>
+                <p id="Text5" class="card-text">Diana Montoya, Daniel Cárdenas. Semillero de innovación geográfica, Esri Colombia</p>
                 <button id="buttonGra" onclick="on()">Grafica de población</button>
             </div>
         </div>

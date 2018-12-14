@@ -25,8 +25,12 @@
     <script src="https://js.arcgis.com/4.9/"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript">
+
+
     function nombre(value) {
         document.getElementById('Text1').innerHTML = "Nombre " + value;
+            document.getElementById("buttonGra").style.display = "block";
+
     }
 
 
@@ -113,11 +117,11 @@
 
             nombre("Rinoceronte Java");
             lugar("Vietnam, Isla de Java y Borneo");
-            causas("Se encuentran en peligro debido a la caza de los mismos para obtener cuernos. Adicionalmente  la conversión de lugares boscosos en territorios agricolas, desplazan al rinoceronte java y lo exponn a diversos peligros en forma de enfermedad y escacez de comida.");
-            habitat("Bosques humedos y lugares con pastos altos. Generalmente encontrados en lugares de baja altitud, sin embargo la actividad humana los ha desplazado a espacios más elevados.");
+            causas("Debido a la caza de los mismos para obtener cuernos. Adicionalmente  la conversión de lugares boscosos en territorios agricolas, desplazan al rinoceronte y lo exponen a diversos peligros en forma de enfermedad y escasez de comida.");
+            habitat("Bosques humedos y lugares con pastos altos. Generalmente encontrados en lugares de baja altitud.");
             fuentes("WWF, Animal Info, abc.es");
             Imagen1("imagenes/rinoceronte.png");
-
+            Imagen2("Graficas/Rhino.png");
             GoToPlace(110, 1, 7000000)
 
         });
@@ -128,9 +132,9 @@
             nombre("Guepardo");
             lugar("Argelia, Irán, Nambia, Nigeria, Sudáfrica, Zimbabue");
             causas("En el pasado, las bajas de guepardos eran principalmente por deportes de caza y el mercado que demandaba la piel de este animal. Ahora hay peligro de extinción debido a que el humano está cazando sus presas y los guepardos se quedan sin comida.");
-            habitat("Lugares secos del sub sahara africano, generalmente planicias, ya que estas son perfectas para su camuflaje. Sin embargo no es raro encontrarlos en areas más boscosas.");
+            habitat("Lugares secos del sub sahara africano, generalmente planicias. Sin embargo no es raro encontrarlos en areas más boscosas.");
             fuentes("WWF, Animal Info, abc.es");
-
+Imagen2("Graficas/Guepardo.png");
              Imagen1("imagenes/guepardo.png");
             GoToPlace(32, 7, 100000000)
 
@@ -145,6 +149,7 @@
             habitat("Bosques templados");
             fuentes("WWF, Animal Info");
              Imagen1("imagenes/tigre.png");
+             Imagen2("Graficas/Tigre.png");
             GoToPlace(120, 35, 10000000)
 
         });
@@ -153,10 +158,11 @@
 
             nombre("Elefante asiático");
             lugar("Bangladesh, Bután, Brunei, Camboya, China, India, Indonesia, Laos, Malasia, Birmania, Nepal, Sri Lanka, Tailandia y Vietnam.");
-            causas("Inicialmente, se encuentran en peligro de extinción debido al comercio ilegal de marfíl, el cual a pesar de afectar principalmente a los elefantes africanos, los elefantes asiáticos también son victimas de este tipo de caza. Por otro lado, la pérdida de colmillos en los machos, reduce la propabilidad de que estos se reproduzcan.");
+            causas("Debido al comercio ilegal de marfíl, el cual a pesar de afectar principalmente a los elefantes africanos, los elefantes asiáticos también son victimas de este tipo de caza. Por otro lado, la pérdida de colmillos en los machos, reduce la propabilidad de que estos se reproduzcan.");
             habitat("Bosques");
             fuentes("WWF, Animal Info");
             Imagen1("imagenes/elefante.png");
+            Imagen2("Graficas/Elefante.png");
            
             GoToPlace(100, 11, 15000000)
 
@@ -170,6 +176,7 @@
             habitat("Mares del norte del Golfo de California");
             fuentes("WWF, Animal Info");
  Imagen1("imagenes/vaquita.png");
+ Imagen2("Graficas/Vaquita.png");
            
             GoToPlace(-110, 30, 10000000, )
 
@@ -184,7 +191,7 @@
             habitat("Montañas y bosques");
             fuentes("WWF, Animal Info");
              Imagen1("imagenes/gorila.png");
-           
+           Imagen2("Graficas/Gorila.png");
 
             GoToPlace(25, -5, 10000000)
 
@@ -197,7 +204,7 @@
             habitat("Praderas y brezales");
             fuentes("WWF, Animal Info, AWF");
              Imagen1("imagenes/lobo.png");
-           
+           Imagen2("Graficas/Lobo.png");
             GoToPlace(38.7, 7.5, 6000000)
 
         });
@@ -209,6 +216,7 @@
             habitat("Sistema fluvial de Ganges y Brahmaputra");
             fuentes("WWF, Animal Info");
             Imagen1("imagenes/delfin.png");
+            Imagen2("Graficas/Delfin.png");
            
             GoToPlace(90, 20, 7000000)
 
@@ -222,7 +230,7 @@
             fuentes("WWF, Animal Info");
 
             Imagen1("imagenes/orangutan.png");
-           
+           Imagen2("Graficas/Orangutan.png");
             GoToPlace(105, 0, 7000000)
 
         });
@@ -231,11 +239,11 @@
 
             nombre("Oso Polar");
             lugar("Canadá, Circulo ártico, Groenlandia y  Rusia");
-            causas("Principalmente, la baja en osos polares es debido a calentamiento global. La actividad humana derrite los casquetes polares, dejando a los osos sin hábitat. Adicionalmente se pueden ver casos de caza ilegal en lugares como Canadá o Rusia. Existen otros factores adyacentes como desastres petroleros, los cuales dañan por completo las cadenas alimenticias en las que participan los osos.");
+            causas("Principalmente, la baja en osos polares es debido a calentamiento global. Adicionalmente se pueden ver casos de caza ilegal en lugares como Canadá o Rusia. Existen otros factores adyacentes como desastres petroleros, los cuales dañan por completo las cadenas alimenticias en las que participan los osos.");
             habitat("Regiones Polares");
             fuentes("WWF, Animal Info, polarbearscience");
             Imagen1("imagenes/oso.png");
-           
+           Imagen2("Graficas/Oso.png");
             GoToPlace(-70, 85, 15000000)
 
         });
@@ -292,7 +300,8 @@
         color: #FFFFFF;
         font-family: 'Botones';
         src: url("fuentes/JuanMikes.otf");
-        font-weight: 1;
+        font-weight: 15px;
+        font-size: 17px;
         padding: 10px;
         padding-left: 10px;
         padding-right: 70px;
@@ -393,11 +402,12 @@ background-size: cover;
     }
 
     #buttonGra {
+        display: none;
         background-image: url("imagenes/boton.png");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-color: transparent;
-        display: inline-block;
+        
         background-size: cover;
         top: 85%;
         left: 10%;
@@ -422,8 +432,8 @@ background-size: cover;
     }
 
     #cardid {
-        width: 25%;
-        left: 80%;
+        width: 30%;
+        left: 75%;
         top: 0%;
         height: 100%;
         background-image: url("imagenes/madera2.png");
@@ -539,16 +549,16 @@ background-size: cover;
             <h1 id = "barb" class="w3-padding-64"><b>Animales<br>en Peligro<br>de Extincion</b></h1>
         </div>
         <div class="w3-bar-block">
-            <a id="#Rinoceronte" class="w3-bar-item w3-button w3-hover-white">Rinoceronte de Java </a>
-            <a id="#Guepardo"  class="w3-bar-item w3-button w3-hover-white">Guepardo</a>
-            <a id="#Tigre" class="w3-bar-item w3-button w3-hover-white">Tigre Siberiano</a>
-            <a id="#Lobo" class="w3-bar-item w3-button w3-hover-white">Lobo Etiope</a>
-            <a id="#Elefante"  class="w3-bar-item w3-button w3-hover-white">Elefante asiático</a>
-            <a id="#Vaquita" class="w3-bar-item w3-button w3-hover-white">Vaquita Marina</a>
-            <a id="#Gorila" class="w3-bar-item w3-button w3-hover-white">Gorila de Montaña</a>
-            <a id="#Delfin" class="w3-bar-item w3-button w3-hover-white">Delfín del Ganges</a>
-            <a id="#Orangutan" class="w3-bar-item w3-button w3-hover-white">Orangután de Sumatra</a>
-            <a id="#Oso" class="w3-bar-item w3-button w3-hover-white">Oso Polar</a>
+            <a id="#Rinoceronte" class="w3-bar-item w3-button w3-hover-opacity">Rinoceronte de Java </a>
+            <a id="#Guepardo"  class="w3-bar-item w3-button w3-hover-opacity">Guepardo</a>
+            <a id="#Tigre" class="w3-bar-item w3-button w3-hover-opacity">Tigre Siberiano</a>
+            <a id="#Lobo" class="w3-bar-item w3-button w3-hover-opacity">Lobo Etiope</a>
+            <a id="#Elefante"  class="w3-bar-item w3-button w3-hover-opacity">Elefante asiático</a>
+            <a id="#Vaquita" class="w3-bar-item w3-button w3-hover-opacity">Vaquita Marina</a>
+            <a id="#Gorila" class="w3-bar-item w3-button w3-hover-opacity">Gorila de Montaña</a>
+            <a id="#Delfin" class="w3-bar-item w3-button w3-hover-opacity">Delfín del Ganges</a>
+            <a id="#Orangutan" class="w3-bar-item w3-button w3-hover-opacity">Orangután de Sumatra</a>
+            <a id="#Oso" class="w3-bar-item w3-button w3-hover-opacity">Oso Polar</a>
         </div>
     </nav>
     <header id="BarraResponsive" class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
@@ -564,7 +574,7 @@ background-size: cover;
                 <img id= "img1" class="card-img-top" src="imagenes/logo.png">
                
                 <p id="Text1" class="card-text">En este mapa se presentan 10 especies de animales en peligro de extinción, sin contar las muchas más que se encuentran en esta condición.
-Conoce los diferentes lugares del planeta donde estas especies habitan, junto con algunos datos sobre cada especie y una gráfica donde podrás entender cómo ha cambiado la población proyectada hasta el año 2022.
+Conoce los diferentes lugares del planeta donde estas especies habitan, junto con algunos datos sobre cada especie y una gráfica creada con un algorítmo de machine learning, donde podrás entender cómo ha cambiado la población proyectada hasta el año 2022.
 Elaborado por:</p>
                 <p id="Text2" class="card-text"></p>
                 <p id="Text3" class="card-text"></p>
@@ -594,6 +604,8 @@ Elaborado por:</p>
         }
 
     }
+    
+
     
 
     function off() {
